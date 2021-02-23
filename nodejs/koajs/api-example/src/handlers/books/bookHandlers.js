@@ -1,4 +1,4 @@
-const {getAll: getAllBooks, getOne: getOneBook} = require("../../database/bookRepository");
+const {getAll: getAllBooks, getOne: getOneBook, add: addBook} = require("../../database/bookRepository");
 
 /**
  *
@@ -50,7 +50,30 @@ async function getBook (ctx) {
   }
 }
 
+/**
+ *
+ * @param ctx
+ * @returns {Promise<{success: boolean, error: *}|{success: boolean}>}
+ */
+async function save(ctx) {
+  try {
+    const postData = ctx.request.body;
+    addBook(postData);
+
+    ctx.status = 201;
+    return ctx.body = {
+      success: true
+    }
+  } catch (e) {
+    return ctx.body = {
+      success: false,
+      error: e.message
+    }
+  }
+}
+
 module.exports = {
   getBooks,
-  getBook
+  getBook,
+  save
 };

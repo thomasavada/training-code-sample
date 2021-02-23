@@ -1,3 +1,4 @@
+const fs = require('fs');
 const {data: books} = require('./books.json');
 
 
@@ -18,7 +19,19 @@ function getOne(id) {
   return books.find(book => book.id === parseInt(id));
 }
 
+/**
+ *
+ * @param data
+ */
+function add(data) {
+  const updatedBooks = [data, ...books];
+  return fs.writeFileSync('./src/database/books.json', JSON.stringify({
+    data: updatedBooks
+  }));
+}
+
 module.exports = {
   getOne,
-  getAll
+  getAll,
+  add
 };

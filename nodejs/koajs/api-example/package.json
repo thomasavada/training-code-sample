@@ -7,12 +7,13 @@
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Aman Mittal <amandeepmittal@live.com> (www.amanhimself.me)",
+  "author": "Thomas Nguyen",
+  "email": "anhnt@avada.io",
   "license": "MIT",
   "dependencies": {
-    "koa": "^2.5.3",
-    "koa-body": "^4.0.4",
-    "koa-router": "^7.4.0"
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.4"

@@ -7,7 +7,9 @@ const router = new Router({
 });
 
 // Routes will go here
+
 router.get('/books', bookHandler.getBooks);
 router.get('/books/:id', bookHandler.getBook);
+router.post('/books', bookHandler.save);
 
 module.exports = router;
