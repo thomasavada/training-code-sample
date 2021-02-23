@@ -1,6 +1,6 @@
 const yup = require('yup');
 
-async function bookInputMiddleware(ctx, next) {
+export default async function bookInputMiddleware(ctx, next) {
   try {
     const postData = ctx.request.body;
     let schema = yup.object().shape({
@@ -19,7 +19,5 @@ async function bookInputMiddleware(ctx, next) {
       errorName: e.name
     }
   }
-
 }
 
-module.exports = bookInputMiddleware;
