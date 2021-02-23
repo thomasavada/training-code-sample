@@ -44,7 +44,7 @@ bower_components
 build/Release
 
 # Dependency directories
-**/node_modules/**
+nodejs/koajs/api-example/node_modules/
 
 # Optional npm cache directory
 .npm
@@ -83,4 +83,3 @@ serviceAccount.*.json
 ./packages/assets/grapesjs-dev/
 /packages/assets/env.prod
 /packages/assets/env.staging
-
