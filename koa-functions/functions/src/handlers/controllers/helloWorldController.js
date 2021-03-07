@@ -6,4 +6,4 @@ async function hello(ctx) {
 
 module.exports = {
   hello
-}
+};
