@@ -10,7 +10,10 @@
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1",
-    "@shopify/polaris": "^6.1.0"
+    "@shopify/polaris": "^6.1.0",
+    "react-router-dom": "^5.2.0",
+    "history": "^4.9.0",
+    "react-loadable": "^5.5.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -35,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@shopify/polaris-icons": "^4.5.0",
+    "prop-types": "^15.7.2"
   }
 }
