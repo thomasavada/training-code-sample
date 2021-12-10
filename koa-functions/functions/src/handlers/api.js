@@ -4,7 +4,6 @@ const routes = require('../routes/routes.js');
 
 const app = new Koa();
 
-app.use(koaBody());
 app.use(routes.routes());
 app.use(routes.allowedMethods());
 
