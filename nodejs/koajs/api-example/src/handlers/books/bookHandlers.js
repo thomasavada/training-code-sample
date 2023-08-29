@@ -41,12 +41,9 @@ export async function getBook(ctx) {
       }
     }
 
-    ctx.status = 404;
-    return ctx.body = {
-      status: 'error!',
-      message: 'Book Not Found with that id!'
-    };
+    throw new Error('Book Not Found with that id!')
   } catch (e) {
+    ctx.status = 404;
     return ctx.body = {
       success: false,
       error: e.message
